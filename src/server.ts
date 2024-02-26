@@ -8,3 +8,5 @@ dotenv.config();
 console.log("PORT:", process.env.PORT);
 
 console.log("MONGO_URL:", process.env.MONGO_URL);
+
+// CLESTER => DATABASE => COLLECTION => DOCUMENT

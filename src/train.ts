@@ -1,3 +1,4 @@
+//npm run train - bilan codni ishga tushiramiz!
 function getHighestIndex(nums: number[]) {
   let highestNums = 0;
   let maxIndex = 0;
