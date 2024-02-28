@@ -1,4 +1,5 @@
 //npm run train - bilan codni ishga tushiramiz!
+/*
 function getHighestIndex(nums: number[]) {
   let highestNums = 0;
   let maxIndex = 0;
@@ -14,3 +15,18 @@ function getHighestIndex(nums: number[]) {
 let test = [3, 5, 9, 12];
 
 console.log(getHighestIndex(test));
+*/
+// TASK H
+function getPositive(arr: number[]) {
+  let positiveNums = "";
+
+  for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] > 0) {
+      positiveNums += arr[i];
+    }
+  }
+
+  return positiveNums;
+}
+
+console.log(getPositive([4, -8, 6, -2, 7]));
