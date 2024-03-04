@@ -42,3 +42,9 @@ console.log(getPositive([4, -8, 6, -2, 7]));
        css => snake_case
     -Error handling   
 */
+
+/*
+Traditional API
+Rest API
+GraphQL API
+*/
