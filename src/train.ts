@@ -17,6 +17,7 @@ let test = [3, 5, 9, 12];
 console.log(getHighestIndex(test));
 */
 // TASK H
+/*
 function getPositive(arr: number[]) {
   let positiveNums = "";
 
@@ -30,3 +31,14 @@ function getPositive(arr: number[]) {
 }
 
 console.log(getPositive([4, -8, 6, -2, 7]));
+*/
+
+/*  Project Standards:
+    -Logging Standards
+    -Naming Standards
+       function, method, variable => camelCase
+       class => PascalCase
+       folder => kebab-case
+       css => snake_case
+    -Error handling   
+*/
