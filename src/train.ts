@@ -1,4 +1,21 @@
 //npm run train - bilan codni ishga tushiramiz!
+
+//MIT J Task
+
+function findLongestWord(str: string) {
+  const splitedStr = str.split(" ");
+
+  let longestWord = splitedStr[0];
+
+  for (let word of splitedStr) {
+    if (word.length >= longestWord.length) longestWord = word;
+  }
+
+  return longestWord;
+}
+
+console.log(findLongestWord("I am from  Namangan"));
+
 //MIT Task I
 /*function getDigits(str: string) {
   const digits = str.match(/\d/g);
