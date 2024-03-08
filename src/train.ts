@@ -1,12 +1,12 @@
 //npm run train - bilan codni ishga tushiramiz!
 //MIT Task I
-function getDigits(str: string) {
+/*function getDigits(str: string) {
   const digits = str.match(/\d/g);
 
   return digits?.join("");
 }
 console.log(getDigits("i12g2a"));
-
+*/
 /*
 function getHighestIndex(nums: number[]) {
   let highestNums = 0;
