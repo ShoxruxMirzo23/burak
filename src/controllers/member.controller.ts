@@ -52,4 +52,4 @@ memberController.login = async (req: Request, res: Response) => {
   }
 };
 
-export default memberController;
+export default memberController; // clear
