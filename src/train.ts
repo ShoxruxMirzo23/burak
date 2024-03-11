@@ -88,3 +88,8 @@ Traditional API
 Rest API
 GraphQL API
 */
+
+/*
+Traditional FD => Backend server site rendering (BSSR) => EJS
+Modern FD => SPA (Sinfle page application) bu user larni applicationi  => REACT
+*/

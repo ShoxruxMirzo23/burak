@@ -1,7 +1,6 @@
 import MemberModel from "../schema/Member.model";
 import { LoginInput, Member, MemberInput } from "../libs/types/member";
-import Errors from "../libs/Errors";
-import { HttpCode, Message } from "../libs/Errors";
+import Errors, { HttpCode, Message } from "../libs/Errors";
 import { MemberType } from "../libs/enums/member.enum";
 import * as bcrypt from "bcryptjs";
 class MemberService {
@@ -27,6 +26,7 @@ class MemberService {
   }
 
   public async login(input: LoginInput): Promise<Member> {
+    //TODO : CONSIDER MEMBER STATUS LATER
     const member = await this.memberModel
       .findOne(
         { memberNick: input.memberNick },
