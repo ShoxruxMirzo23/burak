@@ -4,52 +4,37 @@ import MemberService from "../models/Member.service";
 import { LoginInput, Member, MemberInput } from "../libs/types/member";
 import Errors from "../libs/Errors";
 
-// REACT loyiha uchun
-const memberController: T = {};
 const memberService = new MemberService();
 
+const memberController: T = {};
 memberController.signup = async (req: Request, res: Response) => {
   try {
-    console.log("body", req.body);
-
-    const input: MemberInput = req.body;
-
-    const result: Member = await memberService.signup(input);
-
-    //    TODO: TOKENS AUTHENTICATION
+    console.log("signup");
+    const input: MemberInput = req.body,
+      result: Member = await memberService.signup(input);
+    //TODO;TOKENS AUTHENTICATION
 
     res.json({ member: result });
   } catch (err) {
     console.log("Error on signup: ", err);
-    if (err instanceof Errors) {
-      res.status(err.code).json(err);
-    } else {
-      res.status(Errors.standard.code).json(Errors.standard);
-    }
-    //    res.json(err)
+    if (err instanceof Errors) res.status(err.code).json(err);
+    else res.status(Errors.standard.code).json(Errors.standard);
   }
 };
 
 memberController.login = async (req: Request, res: Response) => {
   try {
     console.log("login");
-    console.log("body: ", req.body);
-
-    const input: LoginInput = req.body;
-
-    const result = await memberService.login(input);
-
+    const input: LoginInput = req.body,
+      result = await memberService.login(input);
     //    TODO: TOKENS AUTHENTICATION
 
     res.json({ member: result });
   } catch (err) {
     console.log("Error on login: ", err);
-    if (err instanceof Errors) {
-      res.status(err.code).json(err);
-    } else {
-      res.status(Errors.standard.code).json(Errors.standard);
-    }
+    if (err instanceof Errors) res.status(err.code).json(err);
+    else res.status(Errors.standard.code).json(Errors.standard);
   }
 };
 
-export default memberController; // clear
+export default memberController;
