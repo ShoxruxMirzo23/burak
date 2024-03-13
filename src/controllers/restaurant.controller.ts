@@ -47,6 +47,9 @@ restaurentController.processSignup = async (
     //    TODO: SESSIONS AUTHENTICATION
 
     req.session.member = result;
+    req.session.save(function () {
+      res.send(result);
+    });
 
     res.send(result);
   } catch (err) {
@@ -55,7 +58,10 @@ restaurentController.processSignup = async (
   }
 };
 
-restaurentController.processLogin = async (req: Request, res: Response) => {
+restaurentController.processLogin = async (
+  req: AdminRequest,
+  res: Response
+) => {
   try {
     console.log("processLogin");
 
@@ -63,7 +69,10 @@ restaurentController.processLogin = async (req: Request, res: Response) => {
     const result = await memberService.processLogin(input);
     //    TODO: SESSIONS AUTHENTICATION
 
-    res.send(result);
+    req.session.member = result;
+    req.session.save(function () {
+      res.send(result);
+    });
   } catch (err) {
     console.log("Error, processLogin:", err);
     res.send(err);
