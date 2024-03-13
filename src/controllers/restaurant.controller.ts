@@ -3,7 +3,7 @@ import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
-import { Message } from "../libs/Errors";
+import Errors, { Message } from "../libs/Errors";
 
 const memberService = new MemberService();
 
@@ -11,9 +11,10 @@ const restaurentController: T = {};
 restaurentController.goHome = (req: Request, res: Response) => {
   try {
     console.log("goHome");
-    res.render("home");
+    res.render("home"); // send | render |redirect
   } catch (err) {
     console.log("Error, goHome:", err);
+    res.redirect("/admin");
   }
 };
 
@@ -23,6 +24,7 @@ restaurentController.getSignup = (req: Request, res: Response) => {
     res.render("signup");
   } catch (err) {
     console.log("Error, getSignup: ", err);
+    res.redirect("/admin");
   }
 };
 
@@ -32,6 +34,7 @@ restaurentController.getLogin = (req: Request, res: Response) => {
     res.render("login");
   } catch (err) {
     console.log("Error, getLogin: ", err);
+    res.redirect("/admin");
   }
 };
 
@@ -52,10 +55,14 @@ restaurentController.processSignup = async (
       res.send(result);
     });
 
-    res.send(result);
+    //res.send(result);
   } catch (err) {
     console.log("Error, processSignup: ", err);
-    res.send(err);
+    const message =
+      err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+    res.send(
+      `<script> alert("${message}"); window.location.replace('admin/signup') </script>`
+    );
   }
 };
 
@@ -76,7 +83,23 @@ restaurentController.processLogin = async (
     });
   } catch (err) {
     console.log("Error, processLogin:", err);
-    res.send(err);
+    const message =
+      err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+    res.send(
+      `<script> alert("${message}"); window.location.replace('admin/login') </script>`
+    );
+  }
+};
+
+restaurentController.logout = async (req: AdminRequest, res: Response) => {
+  try {
+    console.log("logout");
+    req.session.destroy(function () {
+      res.redirect("/addmi");
+    });
+  } catch (err) {
+    console.log("Error, logout:", err);
+    res.redirect("/admin");
   }
 };
 
@@ -96,4 +119,3 @@ restaurentController.checkAuthSession = async (
 };
 
 export default restaurentController;
-// 46 dars 19:00 minutdan
