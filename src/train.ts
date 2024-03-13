@@ -1,4 +1,19 @@
 //npm run train - bilan codni ishga tushiramiz!
+//MIT TASK L
+
+function reverseSentence(str: string) {
+  const splittedStr = str.split(" ");
+  let reversedStr = [];
+
+  for (const word of splittedStr) {
+    reversedStr.push(word.split("").reverse().join(""));
+  }
+
+  return reversedStr.join(" ");
+}
+
+console.log(reverseSentence("we like Coding!"));
+
 //MIT K TASK
 function countVowels(str: string) {
   const vowels: string[] = ["a", "e", "i", "o", "u"];
