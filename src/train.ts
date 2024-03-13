@@ -1,4 +1,18 @@
 //npm run train - bilan codni ishga tushiramiz!
+//MIT K TASK
+function countVowels(str: string) {
+  const vowels: string[] = ["a", "e", "i", "o", "u"];
+  const strArr: string[] = str.split("");
+
+  const findVowel: string[] = strArr.filter((elem: string) =>
+    vowels.includes(elem)
+  );
+
+  return findVowel.length;
+}
+
+let result = countVowels("string");
+console.log("Vowels are: ", result);
 
 //MIT J Task
 /*
@@ -17,19 +31,19 @@ function findLongestWord(str: string) {
 console.log(findLongestWord("I am from  Namangan"));
 */
 
-function findLongestWord(str: string) {
-  const splitedStr = str.split(" ");
+//function findLongestWord(str: string) {
+//  const splitedStr = str.split(" ");
 
-  let longestWord = splitedStr[0];
+//  let longestWord = splitedStr[0];
 
-  for (let word of splitedStr) {
-    if (word.length > longestWord.length) longestWord = word;
-  }
+//  for (let word of splitedStr) {
+//    if (word.length > longestWord.length) longestWord = word;
+//  }
 
-  return longestWord;
-}
-const result = findLongestWord("I come from Uzbekistan");
-console.log("result:", result);
+//  return longestWord;
+//}
+//const result = findLongestWord("I come from Uzbekistan");
+//console.log("result:", result);
 
 //MIT Task I
 /*function getDigits(str: string) {
