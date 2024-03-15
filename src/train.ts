@@ -1,6 +1,18 @@
 //npm run train - bilan codni ishga tushiramiz!
-//MIT TASK L
 
+//MIT Man-TASK
+let getSquareNumbers = (ele: any[]) => {
+  let result_store = [];
+
+  for (let i = 0; i < ele.length; i++) {
+    result_store.push({ number: ele[i], square: ele[i] * ele[i] });
+  }
+  return result_store;
+};
+let result = getSquareNumbers([1, 2, 3]);
+console.log(result);
+//MIT TASK L
+/*
 function reverseSentence(str: string) {
   const splittedStr = str.split(" ");
   let reversedStr = [];
