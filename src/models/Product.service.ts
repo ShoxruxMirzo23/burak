@@ -1,6 +1,10 @@
-//import { shapeIntoMongooseObjectId } from "../libs/config";
+import { shapeIntoMongooseObjectId } from "../libs/config";
 import Errors, { HttpCode, Message } from "../libs/Errors";
-import { Product, ProductInput } from "../libs/types/product";
+import {
+  Product,
+  ProductInput,
+  ProductUpdateInput,
+} from "../libs/types/product";
 import ProductModel from "../schema/Product.model";
 class ProductService {
   private readonly productModel;
@@ -29,8 +33,7 @@ class ProductService {
       throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
     }
   }
-}
-/*
+
   public async updateChosenProduct(
     id: string,
     input: ProductUpdateInput
@@ -45,5 +48,4 @@ class ProductService {
     return result;
   }
 }
-*/
 export default ProductService;
