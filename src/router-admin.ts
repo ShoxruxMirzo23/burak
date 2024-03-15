@@ -5,11 +5,6 @@ import restaurantController from "./controllers/restaurant.controller";
 import productController from "./controllers/product.controller";
 import makeUploader from "./libs/utils/uploader";
 
-/** Restaurant */
-// gets two argument =>
-// 1: endpoint (url)
-// 2: restaurantController ga bogliq methodlar
-
 /**Restauran */
 routerAdmin.get("/", restaurantController.goHome);
 routerAdmin
@@ -35,7 +30,7 @@ routerAdmin.post(
   "/product/create",
   restaurantController.verifyRestaurant,
   // makeUploader.single("productImage"),
-  makeUploader("products").array("productImage", 5),
+  makeUploader("products").array("productImages", 5),
   productController.createNewProduct
 );
 routerAdmin.post(
@@ -47,4 +42,3 @@ routerAdmin.post(
 /** User **/
 
 export default routerAdmin;
-/** User */
