@@ -1,6 +1,19 @@
 //npm run train - bilan codni ishga tushiramiz!
 
-//MIT Man-TASK
+function palindromCheck(word: string) {
+  let backward = "";
+  let forward = word.toLowerCase();
+  for (let i = forward.length - 1; i >= 0; i--) {
+    backward += forward[i];
+  }
+
+  return (backward = forward);
+}
+
+console.log(palindromCheck("dad"));
+
+/*
+//MIT TASK-N
 let getSquareNumbers = (ele: any[]) => {
   let result_store = [];
 
@@ -11,6 +24,8 @@ let getSquareNumbers = (ele: any[]) => {
 };
 let result = getSquareNumbers([1, 2, 3]);
 console.log(result);
+*/
+
 //MIT TASK L
 /*
 function reverseSentence(str: string) {
