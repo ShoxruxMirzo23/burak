@@ -99,7 +99,7 @@ restaurentController.logout = async (req: AdminRequest, res: Response) => {
   try {
     console.log("logout");
     req.session.destroy(function () {
-      res.redirect("/addmi");
+      res.redirect("/admin");
     });
   } catch (err) {
     console.log("Error, logout:", err);
