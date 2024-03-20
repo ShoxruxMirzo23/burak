@@ -1,5 +1,6 @@
 //npm run train - bilan codni ishga tushiramiz!
-
+/**=================================================================================*/
+/*
 function palindromCheck(word: string) {
   let backward = "";
   let forward = word.toLowerCase();
@@ -11,7 +12,7 @@ function palindromCheck(word: string) {
 }
 
 console.log(palindromCheck("dad"));
-
+*/
 /*
 //MIT TASK-N
 let getSquareNumbers = (ele: any[]) => {
@@ -73,20 +74,6 @@ function findLongestWord(str: string) {
 console.log(findLongestWord("I am from  Namangan"));
 */
 
-//function findLongestWord(str: string) {
-//  const splitedStr = str.split(" ");
-
-//  let longestWord = splitedStr[0];
-
-//  for (let word of splitedStr) {
-//    if (word.length > longestWord.length) longestWord = word;
-//  }
-
-//  return longestWord;
-//}
-//const result = findLongestWord("I come from Uzbekistan");
-//console.log("result:", result);
-
 //MIT Task I
 /*function getDigits(str: string) {
   const digits = str.match(/\d/g);
@@ -128,7 +115,14 @@ function getPositive(arr: number[]) {
 
 console.log(getPositive([4, -8, 6, -2, 7]));
 */
+/*===================================================================================*/
+/** Validations:
+ * 1.Frontend Validation
+ * 2.Backend Validation
+ * 3.Database Validation
+ */
 
+/**=================================================================================*/
 /*  Project Standards:
     -Logging Standards
     -Naming Standards
@@ -138,14 +132,23 @@ console.log(getPositive([4, -8, 6, -2, 7]));
        css => snake_case
     -Error handling   
 */
-
+/**=================================================================================*/
 /*
-Traditional API
-Rest API
-GraphQL API
+Requests:
+1.Traditional API
+2.Rest API
+3.GraphQL API
 */
-
-/*
-Traditional FD => Backend server site rendering (BSSR) => EJS
-Modern FD => SPA (Sinfle page application) bu user larni applicationi  => REACT
+/**=================================================================================*/
+/* 
+Frontend Development:
+1.Traditional FD => Backend server site rendering (BSSR) => EJS
+2.Modern FD => SPA (Sinfle page application) bu user larni applicationi  => REACT
 */
+/**=================================================================================*/
+/**
+ * Cookies:
+ * Request join
+ * Self destroy
+ *
+ */
