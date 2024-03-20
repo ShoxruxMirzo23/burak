@@ -1,5 +1,18 @@
 //npm run train - bilan codni ishga tushiramiz!
 /**=================================================================================*/
+
+/** MIT O-Task
+ */
+function calculateSumOfNumbers(arr: any[]) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length; i++) {
+    if (typeof arr[i] === "number") sum += arr[i];
+  }
+
+  return sum;
+}
+
+console.log(calculateSumOfNumbers([10, "10", { num: 10 }, true, 35]));
 /*
 function palindromCheck(word: string) {
   let backward = "";
