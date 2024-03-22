@@ -5,7 +5,7 @@ $(function () {
     const id = e.target.id;
 
     const memberStatus = $(`#${id}.member-status`).val();
-
+    // TODO: Axios updateChoenUser
     axios
       .post("/admin/user/edit", { _id: id, memberStatus: memberStatus })
       .then((response) => {
