@@ -43,7 +43,7 @@ productController.createNewProduct = async (
     //console.log("data:", data);
     await productService.createNewProduct(data);
     res.send(
-      `<script> alert("Succesful creation!"); window.location.replace('admin/product/all') </script>`
+      `<script> alert("Succesful creation!"); window.location.replace('/admin/product/all') </script>`
     );
 
     //res.send("Done!");
@@ -54,7 +54,7 @@ productController.createNewProduct = async (
     //if (err instanceof Errors) res.status(err.code).json(err);
     //else res.status(Errors.standard.code).json(Errors.standard);
     res.send(
-      `<script> alert("${message}"); window.location.replace('admin/product/all') </script>`
+      `<script> alert("${message}"); window.location.replace('/admin/product/all') </script>`
     );
   }
 };
