@@ -1,6 +1,16 @@
 //npm run train - bilan codni ishga tushiramiz!
 /**=================================================================================*/
-// MIT TASK Q
+// MIT TASK R
+function calculate(str: string) {
+  let son = str.split("+");
+  let num = 0;
+  for (let i of son) {
+    num += parseInt(i);
+  }
+  return num;
+}
+console.log(calculate("1+3"));
+/* MIT TASK Q
 function hasProperty(obj: any, str: string) {
   let has = false;
   for (let key in obj) {
@@ -10,6 +20,7 @@ function hasProperty(obj: any, str: string) {
   return has;
 }
 console.log(hasProperty({ name: "BMW", model: "M3" }, "moddel"));
+*/
 
 /* MIT Task P
 function objectToArray(obj: Object) {
